@@ -53,7 +53,7 @@ else:
 
 
 @client.on_message(
-    filters.command("repo", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("fada", config.PREFIXES) & ~filters.bot & ~filters.edited
 )
 @handle_error
 async def repo(_, message: Message):
@@ -61,7 +61,7 @@ async def repo(_, message: Message):
 
 
 @client.on_message(
-    filters.command("ping", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("البنك", config.PREFIXES) & ~filters.bot & ~filters.edited
 )
 @handle_error
 async def ping(_, message: Message):
@@ -69,7 +69,7 @@ async def ping(_, message: Message):
 
 
 @client.on_message(
-    filters.command("start", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("اوامري", config.PREFIXES) & ~filters.bot & ~filters.edited
 )
 @language
 @handle_error
@@ -78,7 +78,7 @@ async def start(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command("help", config.PREFIXES) & ~filters.private & ~filters.edited
+    filters.command("الاوامر", config.PREFIXES) & ~filters.private & ~filters.edited
 )
 @language
 @handle_error
@@ -87,7 +87,7 @@ async def help(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["p", "play"], config.PREFIXES) & ~filters.private & ~filters.edited
+    filters.command(["شغل", "تشغيل"], config.PREFIXES) & ~filters.private & ~filters.edited
 )
 @register
 @language
@@ -122,7 +122,7 @@ async def play_stream(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["radio", "stream"], config.PREFIXES)
+    filters.command(["مباشر", "راديو"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -176,7 +176,7 @@ async def live_stream(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["skip", "next"], config.PREFIXES)
+    filters.command(["تخطي", "تخ"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -212,7 +212,7 @@ async def skip_track(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["m", "mute"], config.PREFIXES) & ~filters.private & ~filters.edited
+    filters.command(["ك", "كتم"], config.PREFIXES) & ~filters.private & ~filters.edited
 )
 @register
 @language
@@ -229,7 +229,7 @@ async def mute_vc(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["um", "unmute"], config.PREFIXES)
+    filters.command(["صوت", "ص"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -248,7 +248,7 @@ async def unmute_vc(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["ps", "pause"], config.PREFIXES)
+    filters.command(["ت", "مؤقت"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -267,7 +267,7 @@ async def pause_vc(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["rs", "resume"], config.PREFIXES)
+    filters.command(["اس", "استمرار"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -286,7 +286,7 @@ async def resume_vc(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["stop", "leave"], config.PREFIXES)
+    filters.command(["كافي", "اوكف"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -308,7 +308,7 @@ async def leave_vc(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["list", "queue"], config.PREFIXES)
+    filters.command(["الطابور", "الانتضار"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -345,7 +345,7 @@ async def shuffle_list(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["loop", "repeat"], config.PREFIXES)
+    filters.command(["loop", "كرر"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -513,7 +513,7 @@ async def import_queue(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["pl", "playlist"], config.PREFIXES)
+    filters.command(["pl", "القائمة"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
@@ -572,7 +572,7 @@ async def import_playlist(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["update", "restart"], config.PREFIXES)
+    filters.command(["تحديث", "اعادة تشغيل"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
