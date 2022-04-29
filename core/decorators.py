@@ -115,7 +115,7 @@ def handle_error(func: Callable) -> Callable:
             )
             await pyro_client.send_message(
                 config.SUDOERS[0],
-                f"-------- START CRASH LOG --------\n\n┌ <b>ID:</b> <code>{id}</code>\n├ <b>Chat:</b> <code>{chat.id}</code>\n├ <b>Date:</b> <code>{date}</code>\n├ <b>Group:</b> <a href='{error_msg.link}'>{chat.title}</a>\n└ <b>Traceback:</b>\n<code>{format_exc()}</code>\n\n-------- END CRASH LOG --------",
+                f"-------- 🧑‍💻 مرحبا مطوري هناك مشكلة --------\n\n┌ <b>الايدي:</b> <code>{id}</code>\n├ <b>المجموعة:</b> <code>{chat.id}</code>\n├ <b>الوقت:</b> <code>{date}</code>\n├ <b>الرابط:</b> <a href='{error_msg.link}'>{chat.title}</a>\n└ <b>المشكلة:</b>\n<code>{format_exc()}</code>\n\n-------- تم تسجيل الحالة --------",
                 parse_mode="html",
                 disable_web_page_preview=True,
             )
