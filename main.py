@@ -366,7 +366,7 @@ async def loop_stream(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["mode", "switch"], config.PREFIXES)
+    filters.command(["الوضع", "switch"], config.PREFIXES)
     & ~filters.private
     & ~filters.edited
 )
