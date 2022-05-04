@@ -53,7 +53,7 @@ else:
 
 
 @client.on_message(
-    filters.command("fada", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("fada") & ~filters.bot & ~filters.edited
 )
 @handle_error
 async def repo(_, message: Message):
@@ -61,7 +61,7 @@ async def repo(_, message: Message):
 
 
 @client.on_message(
-    filters.command("البنك", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("البنك") & ~filters.bot & ~filters.edited
 )
 @handle_error
 async def ping(_, message: Message):
@@ -69,7 +69,7 @@ async def ping(_, message: Message):
 
 
 @client.on_message(
-    filters.command("اوامري", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("اوامري") & ~filters.bot & ~filters.edited
 )
 @language
 @handle_error
@@ -78,7 +78,7 @@ async def start(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command("الاوامر", config.PREFIXES) & ~filters.private & ~filters.edited
+    filters.command("الاوامر") & ~filters.private & ~filters.edited
 )
 @language
 @handle_error
@@ -87,7 +87,7 @@ async def help(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["شغل", "تشغيل"], config.PREFIXES) & ~filters.private & ~filters.edited
+    filters.command(["شغل", "تشغيل"] & ~filters.private & ~filters.edited
 )
 @register
 @language
@@ -176,7 +176,7 @@ async def live_stream(_, message: Message, lang):
 
 
 @client.on_message(
-    filters.command(["تخطي", "تخ"], config.PREFIXES)
+    filters.command(["تخطي", "تخ"]
     & ~filters.private
     & ~filters.edited
 )
